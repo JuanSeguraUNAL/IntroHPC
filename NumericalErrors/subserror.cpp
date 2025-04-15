@@ -10,9 +10,10 @@ REAL sum3(int N);
 
 int main(void){
     int N = 100;
-
+    // std::cout << "n \t Suma 1 \t Suma 2 \t Suma 3 \t Dif 1-3 \t Dif 2-3 \n";
     std::cout.precision(7);
     std::cout.setf(std::ios::scientific);
+    
 
     for(int n = 1; n <= N; n++){
         std::cout << n << "\t" << sum1(n) << "\t" << sum2(n) << "\t" << sum3(n) << "\t" << std::fabs(sum1(n) - sum3(n)) / sum3(n) << "\t" << std::fabs(sum2(n) - sum3(n)) / sum3(n) << "\n";
@@ -58,3 +59,5 @@ REAL sum3(int N){
 }
 
 // u columnaX:columnaY
+
+// plot 'subserror.txt' u 1:5, '' u 1:6 w lp

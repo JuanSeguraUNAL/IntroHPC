@@ -61,3 +61,4 @@ REAL sum3(int N){
 // u columnaX:columnaY
 
 // plot 'subserror.txt' u 1:5, '' u 1:6 w lp
+// plot 'subserror.txt' u 1:5 w lp title "Error 1", '' u 1:6 w lp title "Error 2"

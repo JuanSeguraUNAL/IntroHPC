@@ -3,3 +3,5 @@ config.env
 *.pdf
 *.x
 *.exe
+*.png
+

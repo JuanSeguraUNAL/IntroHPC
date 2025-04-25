@@ -3,11 +3,13 @@
 
 typedef float REAL;
 
+// Suma hacia arriba
 REAL sum1(int N);
+// Suma hacia abajo
 REAL sum2(int N);
 
 int main(void){
-    int N = 1000000;
+    int N = 10000;
 
     std::cout.precision(7);
     std::cout.setf(std::ios::scientific);

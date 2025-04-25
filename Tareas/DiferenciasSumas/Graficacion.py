@@ -13,7 +13,7 @@ ax.plot(data[:, 0], data[:, 3],
 ax.set_xlabel(r'$N$')
 ax.set_ylabel(r'Diferencia relativa $\Delta$')
 ax.set_title('Diferencias numéricas en sumas')
-#ax.set_xscale('log')
+# ax.set_xscale('log')
 ax.set_yscale('log')
 plt.legend(fontsize=12)
 plt.tight_layout()

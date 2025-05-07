@@ -4,6 +4,7 @@
 #include <fstream>
 #include <algorithm>
 #include <numeric>
+#include <vector>
 #include <set>
 
 void analyze_document(const std::string & fname);
@@ -34,7 +35,6 @@ void analyze_document(const std::string & fname)
         for(char& x : word){
             x = (char)std::tolower(x);
         }
-        
 
         // Eliminar el ultimo caracter de una palabra en caso de ser especial o de puntuacion
         if(!word.empty() && especiales.find(word.back()) != std::string::npos){
@@ -48,6 +48,19 @@ void analyze_document(const std::string & fname)
         // En caso de estar en el diccionario, aumentar su valor en 1
         else{
             word_count[word] += 1;
+        }
+
+        // Convertimos el map a un vector de pares
+        std::vector<std::pair<std::string, int>> vec(word_count.begin(), word_count.end());
+
+        // Ordenamos por valor, de mayor a menor
+        std::sort(vec.begin(), vec.end(), [](const auto& a, const auto& b) {
+            return a.second > b.second; // Cambiar a < si querés de menor a mayor
+        });
+
+        // Imprimir el resultado
+        for (const auto& par : vec) {
+            std::cout << par.first << " => " << par.second << std::endl;
         }
     }
     

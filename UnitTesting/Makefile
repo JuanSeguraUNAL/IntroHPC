@@ -6,7 +6,7 @@ all: main_factorial.x
 	g++ $(CXXFLAGS) $^ -o $@ -l Catch2Main -l Catch2
 
 %.o: %.cpp
-	g++ -fsanitize=address,undefined,leak -c $<
+	g++ $(CXXFLAGS) -c $<
 
 test: test_factorial.x
 	./$< 
@@ -14,7 +14,12 @@ test: test_factorial.x
 codecoverage: test_factorial.x
 	./$<
 	gcov factorial.cpp test_factorial.cpp
-	genhtml lcov-report/coverage.info --output-directory lcov-report
 
+	gcovr --html-details coverage.html
+
+	lcov --capture --directory . --output-file coverage.info
+	genhtml coverage.info --output-directory coverage
+	firefox coverage/index.html
+	
 clean:
-	rm -f *.o *.x a.out	
+	rm -f *.o *.x a.out	*.gcov *.info *.gcda *.gcno 

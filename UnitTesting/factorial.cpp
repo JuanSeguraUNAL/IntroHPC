@@ -9,3 +9,7 @@ long factorial(long number)
     }
     return number <= 1 ? number : factorial(number-1)*number;
 }
+
+long PorDos(int n){
+    return 2 * n;
+}

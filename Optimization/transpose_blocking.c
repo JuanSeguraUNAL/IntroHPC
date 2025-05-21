@@ -95,4 +95,6 @@ for ((csize = 1; csize <= $MSIZE; csize *= 2)); do echo -n $MSIZE $csize; ./a.ou
 OPT=3 ; gcc -O$OPT transpose_blocking.c; MSIZE=512;
 for ((csize = 1; csize <= $MSIZE; csize *= 2)); do echo -n $MSIZE $csize; ./a.out $MSIZE $csize; done > data-$OPT.txt
 
+plot 'data-0.txt' u 2:4 w lp,'data-1.txt' u 2:4 w lp, 'data-2.txt' u 2:4 w lp, 'data-3.txt' u 2:4 w lp 
+
 */

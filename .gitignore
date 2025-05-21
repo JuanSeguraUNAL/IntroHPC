@@ -5,4 +5,5 @@ config.env
 *.exe
 *.png
 *.o
+*.out
 

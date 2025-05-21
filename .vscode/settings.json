@@ -69,6 +69,7 @@
         "__bit_reference": "cpp",
         "execution": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "stdlib.h": "c"
     }
 }

@@ -70,6 +70,7 @@
         "execution": "cpp",
         "queue": "cpp",
         "stack": "cpp",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "__split_buffer": "cpp"
     }
 }

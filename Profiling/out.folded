@@ -1,0 +1,6 @@
+a.out;_start 156885
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main 88206216
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main;func1 23617561361
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main;func1;new_func1 24723095673
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main;func2 22290563138
+a.out;_start;_dl_start;_dl_sysdep_start;dl_main;_dl_relocate_object;_dl_lookup_symbol_x;do_lookup_x 38716473

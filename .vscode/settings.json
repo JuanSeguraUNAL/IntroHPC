@@ -71,6 +71,7 @@
         "queue": "cpp",
         "stack": "cpp",
         "stdlib.h": "c",
-        "__split_buffer": "cpp"
+        "__split_buffer": "cpp",
+        "dense": "cpp"
     }
 }

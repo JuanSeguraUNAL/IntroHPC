@@ -72,6 +72,7 @@
         "stack": "cpp",
         "stdlib.h": "c",
         "__split_buffer": "cpp",
-        "dense": "cpp"
+        "dense": "cpp",
+        "*.inc": "cpp"
     }
 }
